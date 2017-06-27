@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>SVG_line特效</title><!--可扩展性标记语言子集-->
+		<style>
+			*{margin: 0;padding: 0;}
+			body
+			{
+				background: #000;
+				color: #FFF;
+				font-family: "comic sans ms";
+			}
+			header
+			{
+				font-size: 100px;
+				text-align: center;
+			}
+			#websvg
+			{
+				width: 1000px;
+				height: 460px;
+				margin: 0 auto;
+			}
+			#websvg .s
+			{
+				width: 300px;
+				height: 460px;
+				float: left;
+				text-align: center;
+				margin: 10px 14px;
+				position: relative;
+			}
+			#websvg .s h3
+			{
+				font-size: 200px;
+				font-weight: normal;
+				line-height: 370px;
+			}
+			#websvg .s svg
+			{
+				left: 0;
+				top: 0;
+				position: absolute;
+			}
+			#websvg .s svg line
+			{
+				stroke-width: 4;
+				stroke:deepskyblue;
+				transition: 0.8s;
+			}
+			#websvg .s svg:hover line
+			{
+				stroke-width: 14;
+			}
+			.s svg:hover line.top ,.s svg:hover line.bottom
+			{
+				stroke-dasharray: 330 240;/*第一个为虚线长度，第二个为间隔*/
+			}
+			.s svg:hover line.left ,.s svg:hover line.right
+			{
+				stroke-dasharray: 490 400;
+			}
+			#websvg .s svg:hover line.top
+			{
+				transform: translateX(-300px);
+			}
+			#websvg .s svg:hover line.bottom
+			{
+				transform: translateX(300px);
+			}
+			#websvg .s svg:hover line.left
+			{
+				transform: translateY(460px);
+			}
+			#websvg .s svg:hover line.right
+			{
+				transform: translateY(-460px);
+			}
+		</style>
+	</head>
+	<body>
+		<header>HTML5</header>
+		<div id="websvg">
+			<div class="s">
+				<svg width="100%" height="100%">
+					<line class="top" x1="0" y1="0" x2="900" y2="0"></line>
+					<line class="right" x1="300" y1="0" x2="300" y2="1380"></line>
+					<line class="bottom" x1="300" y1="460" x2="-600" y2="460"></line>
+					<line class="left" x1="0" y1="460" x2="0" y2="-920"></line>
+				</svg>
+				<h3>S</h3>
+				<span>2016,我们一起学习！一起进步</span>
+			</div>
+			<div class="s">
+				<svg width="100%" height="100%">
+					<line class="top" x1="0" y1="0" x2="900" y2="0"></line>
+					<line class="right" x1="300" y1="0" x2="300" y2="1380"></line>
+					<line class="bottom" x1="300" y1="460" x2="-600" y2="460"></line>
+					<line class="left" x1="0" y1="460" x2="0" y2="-920"></line>
+				</svg>
+				<h3>V</h3>
+				<span>2017,我们一起学习！一起进步</span>
+			</div>
+			<div class="s">
+				<svg width="100%" height="100%">
+					<line class="top" x1="0" y1="0" x2="900" y2="0"></line>
+					<line class="right" x1="300" y1="0" x2="300" y2="1380"></line>
+					<line class="bottom" x1="300" y1="460" x2="-600" y2="460"></line>
+					<line class="left" x1="0" y1="460" x2="0" y2="-920"></line>
+				</svg>
+				<h3>G</h3>
+				<span>2018,我们一起学习！一起进步</span>
+			</div>
+		</div>
+	</body>
+</html>
